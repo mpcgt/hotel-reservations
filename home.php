@@ -17,7 +17,7 @@
       <p class="lead mb-4">Utilisez les boutons ci-dessous pour naviguer dans ce site :! ;)</p>
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
       <a href="login.php" type="button" class="btn btn-outline-primary">Connexion</a>
-        <a href="search.php" type="button" class="btn btn-outline-secondary">Chercher un hôtel</a>
+        <a href="search.php" type="button" class="btn btn-outline-secondary">Chercher une chambre</a>
         <a href="manage.php" type="button" class="btn btn-outline-success">Gestion des chambres</a>
         <a href="list.php" type="button" class="btn btn-outline-danger">Listes des réservations en cours</a>
       </div>
