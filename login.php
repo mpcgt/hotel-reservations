@@ -33,7 +33,8 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
                 <?= $error ?>
             </div>
             <?php } ?>
-            <h1 class="mt-5">Connexion</h1>
+            <h1 class="text-center fw-bold text-decoration-underline mb-3">Connexion</h1>
+            <a href="home.php" class="btn btn-success mb-5">Retour à l'accueil</a>
             <form method="POST" action="">
                 <div class="form-group">
     <label for="username">Nom d'utilisateur</label>
@@ -44,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
     <input type="password" class="form-control" id="password" name="password">
   </div>
 
-  <button type="submit" class="btn btn-success">Submit</button>
+  <button type="submit" class="btn btn-primary">Submit</button>
 </div>
 </form>
 </body>

@@ -38,7 +38,8 @@ if($_SERVER["REQUEST_METHOD"] == 'POST') {
 </head>
 <body>
     <div class="container">
-        <h1 class="text-center fw-bold text-decoration-underline mb-5">Gestion des chambres</h1>
+        <h1 class="text-center fw-bold text-decoration-underline mb-3">Gestion des chambres</h1>
+        <a href="home.php" class="btn btn-success mb-5">Retour à l'accueil</a>
         <form action="" method="POST" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="title">Numéro de la chambre</label>
@@ -56,7 +57,7 @@ if($_SERVER["REQUEST_METHOD"] == 'POST') {
                 <label for="description">Image de la chambre</label>
                 <input class="form-control" type="file" name="image" id="image">
         </form>
-            <button class="btn btn-success mt-3" type="submit">Ajouter</button>
+            <button class="btn btn-primary mt-3" type="submit">Ajouter</button>
         </div>
 
         <h2 class="mt-5 text-center fw-bold text-decoration-underline mb-5">Listes des chambres</h2>
