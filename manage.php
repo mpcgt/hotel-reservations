@@ -97,7 +97,7 @@ if($_SERVER["REQUEST_METHOD"] == 'POST') {
                             <img src="<?= $room['image'] ?>" alt="Image de la chambre" width="150">
                         </td>
                         <td>
-                            <a href="" class="btn btn-warning">Modifier</a>
+                            <a href="update_room.php" class="btn btn-warning">Modifier</a>
                             <a href="delete_book.php?id=<?= $book['id'] ?>" class="btn btn-danger">Supprimer</a>
                             </td>
                     </tr>
