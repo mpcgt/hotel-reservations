@@ -98,7 +98,7 @@ if($_SERVER["REQUEST_METHOD"] == 'POST') {
                         </td>
                         <td>
                             <a href="update_room.php" class="btn btn-warning">Modifier</a>
-                            <a href="delete_book.php?id=<?= $book['id'] ?>" class="btn btn-danger">Supprimer</a>
+                            <a href="delete_room.php?id=<?= $room['rooms_id'] ?>" class="btn btn-danger">Supprimer</a>
                             </td>
                     </tr>
                 <?php endforeach; ?>
