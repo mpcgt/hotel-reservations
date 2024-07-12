@@ -38,21 +38,19 @@ if($_SERVER["REQUEST_METHOD"] == 'POST') {
     <title>Réserver une chambre</title>
 </head>
 <body>
-    <h1 class="text-center fw-bold text-decoration-underline mb-5">Réserver une chambre</h1>
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2 g-4">
-  <div class="col">
+    <h1 class="text-center fw-bold text-decoration-underline mb-3">Réserver une chambre</h1>
+    <div class="container">
+    <a href="home.php" class="btn btn-success mb-3">Retour à l'accueil</a>
+    <div class="card-group">
     <div class="card">
       <?php foreach ($rooms as $room) : ?>
-        <img src="<?= $room['image'] ?>" class="card-img-top" alt="Chambre n°1">
+        <img src="<?= $room['image'] ?>" class="card-img-top" alt="Image de la chambre">
       <div class="card-body">
         <h5 class="card-title"><?= $room['title'] ?></h5>
         <p class="card-text"><?= $room['description'] ?></p>
-        <button type="button" class="btn btn-outline-success">Réserver</button><span class="fs-5 ms-3"><?= $room['price'] ?></span>
+        <a href="reservations_room.php" type="button" class="btn btn-outline-success">Réserver</a><span class="fs-5 ms-3"><?= $room['price'] ?></span>
       </div>
       <?php endforeach ?>
-    </div>
-  </div>
 </div>
 </div>
 </body>
