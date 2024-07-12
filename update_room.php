@@ -52,7 +52,7 @@ if($_SERVER["REQUEST_METHOD"] == 'POST') {
 <body>
 <div class="container">
         <h1 class="text-center fw-bold text-decoration-underline mb-3">Gestion des chambres</h1>
-        <a href="home.php" class="btn btn-success mb-5">Retour à l'accueil</a>
+        <a href="manage.php" class="btn btn-success mb-5">Retour à l'accueil</a>
     <form action="" method="POST" enctype="multipart/form-data">
         <div class="form-group">
             <label for="title">Nom de cette chambre</label>
