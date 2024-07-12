@@ -25,8 +25,8 @@ if($_SERVER["REQUEST_METHOD"] == 'POST') {
 }
 
     // Récupérer tous les chambres
-    $sql = $pdo -> query("SELECT * FROM rooms");
-    $rooms = $sql -> fetchAll();
+    $sql = $pdo->query("SELECT * FROM rooms");
+    $rooms = $sql->fetchAll();
 ?>
 
 <!DOCTYPE html>
@@ -38,49 +38,22 @@ if($_SERVER["REQUEST_METHOD"] == 'POST') {
     <title>Réserver une chambre</title>
 </head>
 <body>
-    <h1>Réserver une chambre</h1>
-
+    <h1 class="text-center fw-bold text-decoration-underline mb-5">Réserver une chambre</h1>
+  <div class="container">
     <div class="row row-cols-1 row-cols-md-2 g-4">
   <div class="col">
     <div class="card">
-      <img src="./images/1.jpeg" class="card-img-top" alt="...">
+      <?php foreach ($rooms as $room) : ?>
+        <img src="<?= $room['image'] ?>" class="card-img-top" alt="Chambre n°1">
       <div class="card-body">
-        <h5 class="card-title">Chanbre n°1</h5>
-        <p class="card-text">Une chanbre magnifique, très lumineux avec une belle vue. ☀️</p>
-        <button type="button" class="btn btn-outline-success">Réserver</button>
+        <h5 class="card-title"><?= $room['title'] ?></h5>
+        <p class="card-text"><?= $room['description'] ?></p>
+        <button type="button" class="btn btn-outline-success">Réserver</button><span class="fs-5 ms-3"><?= $room['price'] ?></span>
       </div>
+      <?php endforeach ?>
     </div>
   </div>
-  <div class="col">
-    <div class="card">
-      <img src="./images/2.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Chanbre n'°2</h5>
-        <p class="card-text">Une chanbre magnifique, très lumineux avec une belle vue. ☀️</p>
-        <button type="button" class="btn btn-outline-success">Réserver</button>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="./images/3.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Chambre n°3</h5>
-        <p class="card-text">Une chanbre magnifique, très lumineux avec une belle vue sur toute la ville. ☀️</p>
-        <button type="button" class="btn btn-outline-success">Réserver</button>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="./images/4.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Chambre n°4</h5>
-        <p class="card-text">Une chanbre magnifique, une belle vue avec les poissons et des dauphins. 🦈</p>
-        <button type="button" class="btn btn-outline-success">Réserver</button>
-      </div>
-    </div>
-  </div>
+</div>
 </div>
 </body>
 </html>
