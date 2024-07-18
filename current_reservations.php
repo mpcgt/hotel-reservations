@@ -11,7 +11,7 @@ $sql = $pdo->query("SELECT r.id, u.username, ro.title AS rooms, r.start_date, r.
                     FROM reservations AS r 
                     JOIN users AS u ON r.users_id = u.id 
                     JOIN rooms AS ro ON r.rooms_id = ro.rooms_id
-                    JOIN city as c ON c.city_id = u.id 
+                    JOIN city as c ON c.city_id = u.city_id
                     ");
 
 $reservations = $sql->fetchAll();
