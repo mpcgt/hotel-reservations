@@ -6,10 +6,10 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $sql = $pdo->prepare("SELECT * FROM users WHERE username=:username AND password=:password");
-    $sql->execute(['username'=> $username, 'password' => $password]);
+    $sql = $pdo->prepare("SELECT * FROM users WHERE username=:username");
+    $sql->execute(['username'=> $username]);
     $user = $sql->fetch();
-    if ($user) {
+    if ($user && password_verify($password, $user['password'])) {
         $_SESSION['user_id'] = $user['id'];
         header("Location: search.php");
     } else {
